@@ -32,6 +32,14 @@ jobs:
         cd $GITHUB_WORKSPACE/kernel_workspace
         git clone https://github.com/fate-think/kernel_xiaomi_mido -b thirteen android-kernel --depth=1
                   
+    
+    - name: 开启lxc和docker配置
+      run: |
+        cd $GITHUB_WORKSPACE/kernel_workspace
+        wget https://github.com/wu17481748/lxc-docker/releases/download/lxc-docker-2config/LXC-DOCKER-OPEN-CONFIG.sh
+        chmod 777 LXC-DOCKER-OPEN-CONFIG.sh
+        ./LXC-DOCKER-OPEN-CONFIG.sh android-kernel/arch/arm64/configs/mido_defconfig -w
+
          
     - name: 设置ccache缓存
       uses: hendrikmuhs/ccache-action@v1.2
