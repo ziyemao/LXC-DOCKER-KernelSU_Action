@@ -21,7 +21,6 @@ jobs:
 
     
     - name: 下载Clang-aosp编译器
-      if: env.USE_CUSTOM_CLANG == 'false'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang-aosp
