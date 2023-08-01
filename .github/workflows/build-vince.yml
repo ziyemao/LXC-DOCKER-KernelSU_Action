@@ -30,7 +30,7 @@ jobs:
     - name: 下载内核源码
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone https://github.com/aospa-vince/android_kernel_xiaomi_vince -b topaz android-kernel --depth=1
+        git clone https://github.com/fate-think/vince_kernel_aospa -b topaz android-kernel --depth=1
                   
     
     - name: 开启lxc和docker配置
