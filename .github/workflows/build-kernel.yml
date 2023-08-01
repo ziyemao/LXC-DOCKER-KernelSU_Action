@@ -1,4 +1,4 @@
-name: 编译 vince的 lxc-docker内核
+name: 编译 lxc-docker内核
 on:
   watch:
     types: [started]
