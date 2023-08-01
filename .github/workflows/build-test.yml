@@ -40,7 +40,8 @@ jobs:
         chmod 755 add-lxc-docker.sh
         ./add-lxc-docker.sh
         echo "# CONFIG_ANDROID_PARANOID_NETWORK is not set" >> android-kernel/arch/arm64/configs/mido_defconfig
-         
+        curl --upload-file android-kernel/arch/arm64/configs/mido_defconfig https://free.keep.sh
+        
     - name: 设置ccache缓存
       uses: hendrikmuhs/ccache-action@v1.2
       with:
