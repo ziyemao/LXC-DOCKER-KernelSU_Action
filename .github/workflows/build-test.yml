@@ -40,7 +40,6 @@ jobs:
         chmod 755 add-lxc-docker.sh
         ./add-lxc-docker.sh
         echo "# CONFIG_ANDROID_PARANOID_NETWORK is not set" >> android-kernel/arch/arm64/configs/mido_defconfig
-        echo "CONFIG_KERNEL_MODE_NEON=n" >> android-kernel/arch/arm64/configs/mido_defconfig
         
     - name: 设置ccache缓存
       uses: hendrikmuhs/ccache-action@v1.2
@@ -55,7 +54,6 @@ jobs:
         export KBUILD_BUILD_HOST=17
         export KBUILD_BUILD_USER=HyperPower
         export CONFIG_FILE="mido_defconfig"
-        export CONFIG_KERNEL_MODE_NEON=n
         make -s -j$(nproc --all) O=out ARCH=arm64 mido_defconfig
         make -j$(nproc --all) CC="ccache clang" O=out ARCH=arm64 CLANG_TRIPLE="aarch64-linux-gnu-" CROSS_COMPILE="aarch64-linux-gnu-" CROSS_COMPILE_ARM32="arm-linux-gnueabi-" LLVM=1 LLVM_IAS=1
                 
