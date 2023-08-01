@@ -18,7 +18,8 @@ jobs:
         cat config.env | grep KERNEL_SOURCE_BRANCH= >> $GITHUB_ENV
         cat config.env | grep KERNEL_CONFIG= >> $GITHUB_ENV
         cat config.env | grep LLVM_CONFIG= >> $GITHUB_ENV
-        
+        cat config.env | grep KERNEL_ZIP_NAME= >> $GITHUB_ENV
+
     - name: 构建编译内核环境
       run: |
         sudo apt-get update
@@ -80,8 +81,7 @@ jobs:
     
     
     - name: 打包并上传
-      if: env.CHECK_FILE_IS_OK == 'true'
       uses: actions/upload-artifact@v3
       with:
-        name: Vince-lxc-docker-kernel-20230801
+        name: ${{ env.KERNEL_ZIP_NAME }}
         path: kernel_workspace/AnyKernel3/*
