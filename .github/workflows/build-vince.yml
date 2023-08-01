@@ -38,7 +38,7 @@ jobs:
         cd $GITHUB_WORKSPACE/kernel_workspace
         wget https://github.com/fate-think/LXC-DOCKER-KernelSU_Action/releases/download/1.0.0/add-lxc-docker-custom.sh
         chmod 755 add-lxc-docker.sh
-        ./add-lxc-docker.sh android-kernel/arch/arm64/configs/vince-perf_defconfig
+        ./add-lxc-docker-custom.sh android-kernel/arch/arm64/configs/vince-perf_defconfig
         echo "# CONFIG_ANDROID_PARANOID_NETWORK is not set" >> android-kernel/arch/arm64/configs/vince-perf_defconfig
         
     - name: 设置ccache缓存
