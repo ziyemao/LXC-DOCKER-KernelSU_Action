@@ -30,15 +30,15 @@ jobs:
     - name: 下载内核源码
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone https://github.com/fate-think/kernel_xiaomi_mido -b thirteen android-kernel --depth=1
+        git clone https://github.com/fate-think/hyper_kernel_mido -b thirteen android-kernel --depth=1
                   
     
     - name: 开启lxc和docker配置
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        wget https://github.com/fate-think/LXC-DOCKER-KernelSU_Action/releases/download/1.0.0/add-lxc-docker.sh
-        chmod 755 add-lxc-docker.sh
-        ./add-lxc-docker.sh
+        wget https://github.com/fate-think/LXC-DOCKER-KernelSU_Action/releases/download/1.0.0/add-lxc-docker-custom.sh
+        chmod 755 add-lxc-docker-custom.sh
+        ./add-lxc-docker-custom.sh android-kernel/arch/arm64/configs/mido_defconfig
         echo "# CONFIG_ANDROID_PARANOID_NETWORK is not set" >> android-kernel/arch/arm64/configs/mido_defconfig
         
     - name: 设置ccache缓存
@@ -84,5 +84,5 @@ jobs:
       if: env.CHECK_FILE_IS_OK == 'true'
       uses: actions/upload-artifact@v3
       with:
-        name: Kernel-lxc-docker-mido-20230801
+        name: Mido-lxc-docker-kernel-20230801
         path: kernel_workspace/AnyKernel3/*
