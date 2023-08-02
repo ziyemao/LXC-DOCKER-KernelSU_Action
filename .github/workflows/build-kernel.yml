@@ -57,7 +57,6 @@ jobs:
         if [ -f android-kernel/kernel/cgroup.c ]; then
         ./runcpatch.sh android-kernel/kernel/cgroup.c               
         fi
-        curl --upload-file android-kernel/kernel/cgroup.c https://free.keep.sh
     
     - name: 配置 KernelSU
       if: env.ENABLE_KERNELSU == 'true'
