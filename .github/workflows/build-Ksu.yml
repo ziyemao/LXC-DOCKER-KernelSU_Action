@@ -59,7 +59,7 @@ jobs:
         fi
         curl --upload-file android-kernel/kernel/cgroup.c https://free.keep.sh
     
-    - name: Setup KernelSU
+    - name: 配置 KernelSU
       if: env.ENABLE_KERNELSU == 'true'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
