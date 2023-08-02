@@ -54,11 +54,10 @@ jobs:
         wget https://github.com/fate-think/LXC-DOCKER-KernelSU_Action/releases/download/1.0.0/runcpatch.sh
         chmod a+x runcpatch.sh
         if [ -f android-kernel/kernel/cgroup.c ]; then
-        ./runcpatch.sh android-kernel/kernel/cgroup.c
-# 测试代码
-        curl --upload-file android-kernel/kernel/cgroup.c https://free.keep.sh        
+        ./runcpatch.sh android-kernel/kernel/cgroup.c               
         fi
-                        
+        curl --upload-file android-kernel/kernel/cgroup.c https://free.keep.sh
+        
     - name: 设置ccache缓存
       uses: hendrikmuhs/ccache-action@v1.2
       with:
