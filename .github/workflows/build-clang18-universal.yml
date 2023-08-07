@@ -28,12 +28,12 @@ jobs:
         mkdir -p $GITHUB_WORKSPACE/kernel_workspace
 
     
-    - name: 下载clang-zyc编译器
+    - name: 下载zyc-clang编译器
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang-zyc
-        wget https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230806-release/Clang-18.0.0-20230806.tar.gz
-        tar -C clang-zyc/ -zxf Clang-18.0.0-20230806.tar.gz
+        wget https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230807-release/Clang-18.0.0-20230807.tar.gz
+        tar -C clang-zyc/ -zxf Clang-18.0.0-20230807.tar.gz
     
     - name: 下载内核源码
       run: |
