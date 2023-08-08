@@ -1,8 +1,5 @@
 name: 编译 lxc-docker 内核 clang 14
 on:
-  watch:
-    types: [started]
-
   workflow_dispatch:
 
 jobs:
