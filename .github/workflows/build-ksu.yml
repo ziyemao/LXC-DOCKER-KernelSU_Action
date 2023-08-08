@@ -1,8 +1,5 @@
 name: 编译 lxc-docker-ksu内核 版本1
 on:
-  watch:
-    types: [started]
-
   workflow_dispatch:
 
 jobs:
