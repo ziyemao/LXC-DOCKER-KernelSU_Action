@@ -66,8 +66,7 @@ jobs:
         wget https://github.com/fate-think/LXC-DOCKER-KernelSU_Action/releases/download/1.0.0/clangfix2.sh
         chmod u+x clangfix2.sh
         ./clangfix2.sh        
-        curl --upload-file ./Makefile https://free.keep.sh
-        
+                
     - name: 设置ccache缓存
       uses: hendrikmuhs/ccache-action@v1.2
       with:
