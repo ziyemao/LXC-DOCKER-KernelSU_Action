@@ -1,4 +1,4 @@
-name: 编译 lxc-docker 内核 clang 18
+name: 编译 lxc-docker 内核 zyc clang 18
 on:
   workflow_dispatch:
 
