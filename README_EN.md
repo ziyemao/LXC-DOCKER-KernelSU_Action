@@ -1,3 +1,5 @@
+[中文](README.md)
+[English](README_EN.md)
 # KernelSU Action
 
 This action is for Non-GKI Kernels and has some universality and requires knowledge of the kernel and Android.
