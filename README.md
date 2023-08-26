@@ -13,7 +13,7 @@
 4. 从下方Artifacts 下载编译好的内核
 
 
-# [ 提示 ]
+## 提示
 - 如果编译不过，请采用clang 14 编译
 - 上方菜单选择Actions，选择All workflows，可以看到所有actions
 - config.env文件里有对应的变量说明
