@@ -33,4 +33,5 @@
 - [xiaoleGun](https://github.com/xiaoleGun/KernelSU_Action)
 - [wu17481748](https://github.com/wu17481748/LXC-DOCKER-KernelSU_Action)
 - [qiuqiu](https://github.com/lateautumn233)
-
+- [zyc clang](https://github.com/ZyCromerZ/Clang)
+- [Mandi-Sa](https://github.com/Mandi-Sa/clang)
