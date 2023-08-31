@@ -1,4 +1,4 @@
-name: 编译 lxc-docker 内核 google clang 14
+name: 编译 lxc-docker-ksu 内核 google clang 14
 on:
   workflow_dispatch:
 
@@ -18,6 +18,8 @@ jobs:
         cat config.env | grep KERNEL_CONFIG= >> $GITHUB_ENV
         cat config.env | grep KERNEL_ZIP_NAME= >> $GITHUB_ENV
         cat config.env | grep LLVM_CONFIG= >> $GITHUB_ENV
+        cat config.env | grep ENABLE_KERNELSU= >> $GITHUB_ENV
+        cat config.env | grep KERNELSU_TAG= >> $GITHUB_ENV
 
     - name: 构建编译内核环境
       run: |
@@ -59,6 +61,12 @@ jobs:
         ./runcpatch.sh android-kernel/kernel/cgroup/cgroup.c               
         fi
         
+    - name: 配置 ksu
+      if: env.ENABLE_KERNELSU == 'true'
+      run: |
+        cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
+        curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -s ${{ env.KERNELSU_TAG }}
+                
     - name: 设置ccache缓存
       uses: hendrikmuhs/ccache-action@v1.2
       with:
