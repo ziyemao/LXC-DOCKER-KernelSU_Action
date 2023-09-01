@@ -25,6 +25,19 @@
 - config.env文件里有对应的变量说明
 - 高端机在这里尤其指的是AB分区机子，比如一加8T、红米K30pro、小米10等，没备注的工作流都是低端机，比如小米6、红米5plus、红米note4x、红米4、红米4a等
 
+<br>
+
+## 一些修复方法
+### 关于k30pro内核源码和一加9R的los内核源码，编译完成后，不生成Image.gz和Image.gz-dtb文件
+### 解决办法
+在内核配置文件最后加入以下3行配置，再进行编译
+```
+CONFIG_BUILD_ARM64_KERNEL_COMPRESSION_GZIP=y
+CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE=y
+CONFIG_BUILD_ARM64_DT_OVERLAY=y
+```
+<br>
+
 ## 感谢
 - [AnyKernel3](https://github.com/osm0sis/AnyKernel3)
 - [AOSP](https://android.googlesource.com)
