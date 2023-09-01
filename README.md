@@ -26,6 +26,7 @@
 - 上方菜单选择Actions，选择All workflows，可以看到所有工作流
 - config.env文件里有对应的变量说明
 - 高端机在这里尤其指的是AB分区机子，比如一加8T、红米K30pro、小米10等，没备注的工作流都是低端机，比如小米6、红米5plus、红米note4x、红米4、红米4a等
+- 极少数内核源码加了lxc-docker配置以后，会导致编译报错，这种情况百年一遇，可以考虑换套源码
 
 <br>
 
@@ -38,6 +39,10 @@ CONFIG_BUILD_ARM64_KERNEL_COMPRESSION_GZIP=y
 CONFIG_BUILD_ARM64_APPENDED_DTB_IMAGE=y
 CONFIG_BUILD_ARM64_DT_OVERLAY=y
 ```
+### .py文件报print语法错误
+### 解决方法
+env.sh里切换python2，即SWITCH_PYTHON=后面填写true
+
 <br>
 
 ## 感谢
