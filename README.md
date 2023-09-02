@@ -2,6 +2,9 @@
 [English](README_EN.md)
 # LXC-DOCKER-KernelSU_Action
 
+## 支持的内核版本
+4.9   4.14   4.19   5.4
+
 ## 说明 
 > 有的工作流是用谷歌的 clang 12.0.5编译器
 
