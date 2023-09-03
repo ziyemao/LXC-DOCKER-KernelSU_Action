@@ -1,4 +1,4 @@
-name: 编译 lxc-docker-ksu 内核 阿菌未霜 clang 18 
+name: 低端机 阿菌未霜clang18 
 on:
   workflow_dispatch:
 
