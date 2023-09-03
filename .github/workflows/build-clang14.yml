@@ -1,4 +1,4 @@
-name: 编译 lxc-docker-ksu 内核 google clang 14
+name: 低端机 谷歌clang14
 on:
   workflow_dispatch:
 
