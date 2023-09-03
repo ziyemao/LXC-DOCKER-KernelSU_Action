@@ -1,4 +1,4 @@
-name: 编译 lxc-docker-ksu 内核 zyc clang 18
+name: 低端机 zyc-clang18
 on:
   workflow_dispatch:
 
