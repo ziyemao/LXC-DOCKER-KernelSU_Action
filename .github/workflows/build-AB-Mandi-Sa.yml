@@ -1,4 +1,4 @@
-name: 高端机lxc-docker-ksu 阿菌未霜clang18 稳定版
+name: 高端机 阿菌未霜clang18
 on:
   workflow_dispatch:
 
