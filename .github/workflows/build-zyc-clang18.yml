@@ -36,8 +36,8 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang-zyc
-        wget https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230831-release/Clang-18.0.0-20230831.tar.gz
-        tar -C clang-zyc/ -zxf Clang-18.0.0-20230831.tar.gz
+        wget https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230903-release/Clang-18.0.0-20230903.tar.gz
+        tar -C clang-zyc/ -zxf Clang-18.0.0-20230903.tar.gz
     
     - name: 下载内核源码
       run: |
