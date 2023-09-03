@@ -1,4 +1,4 @@
-name: 高端机 zyc-clang18
+name: 高端机 zyc clang18
 on:
   workflow_dispatch:
 
